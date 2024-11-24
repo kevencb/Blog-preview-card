@@ -19,11 +19,128 @@
 body{
     font-family: "Figtree", sans-serif;
     background-color: var(--yellow);
+    height: 100vh;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    color: #222;
 }
 
 body a{
     text-decoration: none;
+    color: #222;
 }
 
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.card{
+    width: 384px;
+    max-width: 360px;
+    height: 520px;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    border-radius: 18px;
+    box-shadow: 8px 8px var(--gray-dark);
+    transition: all ease-in-out .5s;
+    position: relative;
+}
+
+.card-image{
+    border-radius: 8px;
+}
+
+.card-info{
+    margin: 24px 0 0 0;
+    position: relative;
+}
+
+.card-tag{
+    font-size: 14px;
+    font-weight: var(--text-ultrabold);
+    background-color: var(--yellow);
+    border-radius: 4px;
+    border: 1px solid var(--yellow);
+    transition: all ease-in-out .4s;
+    padding: 8px 12px;
+    display: inline-block;
+    margin-bottom: 16px;
+}
+
+.card-tag:hover{
+    border: 1px solid var(--yellow);
+    background-color: var(--white) !important;
+}
+
+.card-date{
+    display: block;
+    font-size: 14px;
+    font-weight: var(--text-regular);
+}
+
+.card-title{
+    font-size: 24px;
+    line-height: 0;
+    margin-top: 28px;
+    margin-bottom: 30px;
+    transition: all ease-in-out .35s;
+}
+
+.card-title:hover{
+    color: var(--yellow);
+}
+
+.card-description{
+    color: var(--gray-light);
+    line-height: 23px;
+}
+
+.user-info{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    position: absolute;
+    bottom: 24px;
+}
+
+.user-image{
+    width: 32px;
+}
+
+.user-name{
+    font-size: 14px;
+    font-weight: var(--text-ultrabold);
+}
+
+.user-name:hover{
+    text-underline-position: 1px solid aqua;
+}
+
+.attribution{
+    font-size: 11px;
+    text-align: center;
+    margin-top: 48px;
+}
+
+.attribution a{
+    font-size: 12px;
+    color: hsl(228, 45%, 44%);
+    font-weight: 600;
+}
+
+@media (max-width: 430px) {
+    .card{
+        width: 350px;
+    }
+
+    .card-tag, .card-date{
+        font-size: 12px;
+    }
+
+    .card-title{
+        font-size: 20px;
+    }
+
+    .card-description{
+        font-size: 14px;
+    }
+}
